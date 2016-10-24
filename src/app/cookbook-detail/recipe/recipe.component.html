@@ -1,0 +1,14 @@
+<div class="row">
+  <div *ngIf="recipe" class="card z-depth-2 col s6 offset-s3">
+    <div class="card-content pink-text">
+      <a (click)="goBack()" class="waves-effect waves-light btn-flat"><i class="material-icons left">chevron_left</i>Back</a><br>
+      <span class="card-title">{{recipe.name}}</span>
+      <ul class="collection">
+        <li *ngFor="let ingridient of recipe.ingridients" class="collection-item">
+          {{ingridient.name}} 
+          ({{ingridient.quantity}}) 
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

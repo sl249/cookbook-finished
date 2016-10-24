@@ -1,0 +1,14 @@
+<div class="row">
+  <div *ngIf="cookbook" class="card z-depth-2 col s6 offset-s3">
+    <div class="card-content pink-text">
+      <a (click)="goBack()" class="waves-effect waves-light btn-flat"><i class="material-icons left">chevron_left</i>Back</a><br>
+      <span class="card-title">{{cookbook.name}}</span>
+      <ul class="collection">
+        <li *ngFor="let recipe of cookbook.recipes" class="collection-item">
+          {{recipe.name}} 
+          <a (click)="openRecipe(recipe)" class="secondary-content"><i class="material-icons">chevron_right</i></a>  
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

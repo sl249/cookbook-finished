@@ -1,0 +1,9 @@
+<div *ngIf="cookbook" class="card z-depth-2">
+  <div class="card-content pink-text">
+    <span class="card-title">{{cookbook.name}}</span>
+    <h6>Includes {{cookbook.recipes.length}} Recipes</h6>
+  </div>
+  <div class="card-action">
+    <a (click)="viewCookbook()">See Recipes</a>
+  </div>
+</div>

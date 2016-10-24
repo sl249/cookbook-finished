@@ -1,0 +1,7 @@
+<div class="row cookbook-list" *ngIf="cookbooks">
+<search-box (textChanged)="updateSearch($event)" class="col s6 offset-s3"></search-box>
+  <app-message *ngIf="!cookbooks.length" message="No Cookbooks Available"></app-message>
+  <div *ngFor="let cookbook of (cookbooks | abstractPipe:[searchText, 'name']) ">
+      <cookbook-item class="col s6 offset-s3" [cookbook]="cookbook"></cookbook-item>
+  </div>
+</div>
